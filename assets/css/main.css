@@ -1631,7 +1631,9 @@ h3.detail-title {
 
 @media only screen and (max-width: 600px) {
   .btn-margin-phone {
+    margin-top: 10px;
     text-align: center;
+
   }
 }
 
