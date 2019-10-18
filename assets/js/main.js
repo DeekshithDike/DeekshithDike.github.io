@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-
+    var menu = $('.menus');
     //--------------------------------------------------
     // Preloader
     //--------------------------------------------------
@@ -450,9 +450,10 @@
 
     t1.reverse();
      $('.toggle-btn').on("click", function () {
-        t1.reversed(!t1.reversed()); //toggles the orientation
-    })
-  ;
+        $('.menu__toggler').toggleClass('activez');
+        menu.toggleClass('activez');
+        // t1.reversed(!t1.reversed()); //toggles the orientation
+    });
 
     //--------------------------------------------------
     // Magnetic
@@ -548,11 +549,10 @@
 
 
 
-    var toggler = $('.menu__toggler');
-    var menu = $('.menus');
-    toggler.on("click", function () {
-        toggler.toggleClass('activez');
-        menu.toggleClass('activez');
-    });
+    // var toggler = $('.menu__toggler');
+    // toggler.on("click", function () {
+    //     toggler.toggleClass('activez');
+    //     menu.toggleClass('activez');
+    // });
 
 })(jQuery);

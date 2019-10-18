@@ -845,9 +845,7 @@ a {
 }
 
 .bg-3 {
-  background: url("../img/home.jpg") center no-repeat;
-  background-size: cover;
-  z-index: 3;
+  background: url("../img/logo.svg") center no-repeat;
   position: fixed;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -857,7 +855,7 @@ a {
   text-align: center;
   left: 50%;
   height: 60vh;
-  width: 40vw;
+  width: 100%;
   top: 50vh;
 }
 
@@ -1816,4 +1814,16 @@ h3.glp {
 h3.lght {
   color: #ffffff;
 }
-/*# sourceMappingURL=main.css.map */
+
+.rotate-logo {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
