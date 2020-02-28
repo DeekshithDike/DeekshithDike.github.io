@@ -85,6 +85,7 @@ body{
     font-family: open-regular;
     line-height: 25px;
     letter-spacing: 0.8px;
+    overflow-x: hidden !important;
 }
 select::-ms-expand {
     display: none;
@@ -158,9 +159,10 @@ select::-ms-expand {
 
 /* header syles start here*/
 
-header{
-    background-image: url("../images/bg-01.png");
+#header{
+    background-image: url("../images/bg-01.jpg");
     background-size: cover;
+    transition: background 1s linear;
 }
 .overlay{
     background-color: rgba(14, 30, 47, 0.92);
@@ -362,7 +364,7 @@ header{
     text-transform: capitalize;
 }
 .white{
-    color: #fff;
+    color: #fff !important;
 }
 .BannerPlayBtn{
     border-radius: 50%;
@@ -1080,12 +1082,12 @@ label{
 /* video modal styles start here*/
 
 
-#playVideo .modal-dialog{
+.playVideo .modal-dialog{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
 }
-#playVideo .modal-content{
+.playVideo .modal-content{
     width: 100%;
     height: 70vh;
     margin-top: 15vh;

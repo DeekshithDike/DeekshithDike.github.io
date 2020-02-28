@@ -54,7 +54,7 @@
 }
 
 .overlay {
-    background: rgba(33, 34, 63, 0.4);
+    background: rgba(19, 32, 71, 0.33);
 }
 
 .form-control:focus {
@@ -616,7 +616,7 @@ footer ul li a:hover, footer ul li a:focus {
 }
 
 .counter-number-font {
-    color: #594eff;
+    color: #594eff !important;
     text-shadow: 0.075em 0.08em 0.1em rgba(0, 0, 0, 0.3);
 }
 
@@ -662,5 +662,80 @@ footer ul li a:hover, footer ul li a:focus {
   color: #aaaaaa !important;
 }
 
+.img-team {
+    max-width: 150px;
+    padding-top: 50px;
+}
+
+.display-none {
+  display: none;
+}
+
+
+.itemsContainer:hover .play{display:block}
+.play{
+  position : absolute;
+    display:none;
+    top:20%; 
+    width:40px;
+    margin:0 auto; left:0px;
+    right:0px;
+    z-index:100
+} 
+
+.info-card {
+    float: left;
+	-webkit-perspective: 600px;
+}
+
+.front, .back {
+	background: #FFF;
+	border-radius: 10px;
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+
+.front {
+	overflow: hidden;
+	width: 100%;
+	height: 320px;
+	position: absolute;
+	z-index: 1;
+}
+
+.back {
+	padding: 20px;
+	padding-top: 0px;
+	width: 100%;
+	height: 320px;
+	-webkit-transform: rotateY(-180deg);
+	overflow-y: scroll;
+}
+
+.back::-webkit-scrollbar {
+    width: 4px;
+}
+
+.back::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.back::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid black;
+}
+
+.info-card:hover .back {
+	-webkit-transform: rotateY(0);
+}
+
+.info-card:hover .front {
+	-webkit-transform: rotateY(180deg);
+}
+
+.width-135px {
+  width: 135px !important;
+}
 
 /* custom css end here*/

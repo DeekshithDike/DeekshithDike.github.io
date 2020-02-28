@@ -4,6 +4,11 @@ body{
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
+html,body{
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 @media screen and (min-width: 200px) and (max-width: 991px){
     .navbar-default .navbar-brand{
         margin-top: -7px;
@@ -201,7 +206,7 @@ body{
         width: 90vw !important ;
         margin-left: 5vw !important;
     }
-    #playVideo .modal-dialog{
+    .playVideo .modal-dialog{
     	width: 90vw !important ;
         margin-left: 5vw !important;  
         margin-right: 5vw !important;

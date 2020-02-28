@@ -35,7 +35,7 @@
 
     <!--Paraxify css here-->
     <link rel="stylesheet" href="assets/plugins/paraxify/paraxify.css" />
-
+    <script src="https://www.google.com/reCAPTCHA/api.js" async defer></script>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
     <!---loader-->
 
     <!-- header -->
-    <header class="paraxify">
+    <header class="paraxify" id="header">
         <!--top bar-->
         <div class="overlay">
             <!--top bar-->
@@ -70,17 +70,12 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="#banner-section">
-                            <img class="img-responsive headerLogo" src="assets/images/logo-white.png" alt="Logo" />
+                            <img class="img-responsive headerLogo width-135px" src="assets/images/logo-white.png" alt="Logo" />
                         </a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav GradinetNav navbar-nav navbar-right hidden-xs hidden-sm">
-                            <li>
-                                <a href="javascript:;" style="padding-top: 10px; color: #3071ff;"><i class="fa fa-search"></i></a>
-                            </li>
-                        </ul>
                         <ul id="navigation" class="nav navbar-nav navbar-right">
                             <li><a href="#how-it-works" data-val="#how-it-works">COMPANY</a></li>
                             <li><a href="#products" data-val="#services">PRODUCTS</a></li>
@@ -114,17 +109,13 @@
                                     </p>
                                     <p class="spacetop bannerBtns" data-aos="flip-down" data-aos-duration="1000">
                                         <span>
-                                            <button class="btn btn-custom">Known More</button>
+                                            <a href="#gallery" data-val="#gallery" class="btn btn-custom" id="btnLandingLink" style="width: 130px;">View More</a>
                                         </span>
                                         <span class="ml-4">
-                                            <button class="btn btn-custom-outline">Contact US</button>
+                                            <a href="" class="btn btn-custom-outline">Contact US</a>
                                         </span>
                                     </p>
                                 </div>
-                                <div class="col-md-4 col-md-offset-2 col-sm-12 col-xs-12">
-                                    
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -138,118 +129,57 @@
     <!-- HEADER MODAL START HERE-->
 
 
+    <!-- VIDEO MODAL START HERE-->
 
-    <!-- Modal -->
-    <div id="popupRegister" class="modal fade" role="dialog">
+    <div id="playVideo2" class="playVideo modal fade" role="dialog">
         <div class="modal-dialog">
-            <!-- Modal content-->
-            <div id="card">
-                <figure class="front">
-                    <div class="modal-content">
-                        <div id="Login">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Login</h4>
-                                <p> Enter your credentials to login. </p>
-                            </div>
-                            <div class="modal-body" style="overflow: hidden">
-                                <div style="">
-                                    <div class="marg20" style="margin-top: 0px">
-                                        <input type="email" class="form-control themeInputs" placeholder="Your Email"
-                                            id="loginEmail" />
-                                    </div>
-                                    <div class="marg20">
-                                        <input type="password" class="form-control themeInputs"
-                                            placeholder="Your Password" id="loginPassword" />
-                                    </div>
-                                    <div style="margin-top: 25px; margin-bottom: 20px;">
-                                        <button type="submit" class="btn gradientBtn"
-                                            style="margin: 0 auto; display: block; " data-toggle="modal"
-                                            data-target="#pop-register">
-                                            <span>Login</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-md-12 text-center">
-                                        <p class="loginRegisterNote">Donot Have a account? <a href="#">Create a
-                                                account</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </figure>
-                <figure class="back">
-                    <div class="modal-content">
-                        <div id="Register">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Register</h4>
-                                <p> Enter your information to Register. </p>
-                            </div>
-                            <div class="modal-body" style="overflow: hidden">
-                                <div style="">
-                                    <div class="marg20" style="margin-top: 0px">
-                                        <input type="text" class="form-control themeInputs" placeholder="Your Name"
-                                            id="registerName" />
-                                    </div>
-                                    <div class="marg20">
-                                        <input type="email" class="form-control themeInputs" placeholder="Your Password"
-                                            id="registerEmail" />
-                                    </div>
-                                    <div class="marg20">
-                                        <input type="password" class="form-control themeInputs"
-                                            placeholder="Your Password" id="registerPassword" />
-                                    </div>
-                                    <div style="margin-top: 25px; margin-bottom: 20px;">
-                                        <button type="submit" class="btn gradientBtn"
-                                            style="margin: 0 auto; display: block; " data-toggle="modal"
-                                            data-target="#pop-register">
-                                            <span>Register</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-md-12 text-center">
-                                        <p class="loginRegisterNote">Already have an account ? <a href="#">Login
-                                                here</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </figure>
+            <div class="modal-content">
+                <iframe class="iframe" src="https://www.youtube.com/embed/AWtnK5_z_Lk" allowfullscreen></iframe>
             </div>
-
         </div>
     </div>
+    
+    <div id="playVideo" class="playVideo modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <iframe class="iframe" src="https://www.youtube.com/embed/Ly_o-FOP2b0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>    
+    
+    <!-- VIDEO MODAL END HERE-->
 
-
-    <!-- HEADER MODAL END HERE-->
 
     <!--COUNTER SECTION START HERE-->
     
-    <section class="ParalaxImage" id="Counter" style="background-image:url('assets/images/counter-bg.png') ;">
+    <section class="ParalaxImage" id="Counter">
         <div class="">
-            <div class="container sectionPadding ">
+            <div class="container sectionPadding pt-4 pb-5">
                 <div class="row">
-                    <div class="col-md-12 col-xs-12 col-sm-12" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="col-md-12 col-xs-12 col-sm-12 sectionHeader text-center ata-aos=" fade-right" data-aos-duration="1000">
+                        <h1 class="SectionTitle RobotoMedium">Our Work</h1>
+                        <div class="underTitleLine gradientbg"></div>
+                    </div>
+                    <div class="col-md-12 col-xs-12 col-sm-12">
                         <div class="row text-center">
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <h1 class="counter-text-font">STARTUPS</h1>
-                                <h1 class="counterTitle numscroller OpenBold white counter-number-font" data-min='0000' data-max='12'
-                                    data-delay='1' data-increment='3'>
-                                    12
-                                </h1>
+                                <span class="counterTitle numscroller OpenBold white counter-number-font" data-min='0' data-max='41'
+                                    data-delay='3' data-increment='1'>
+                                    41
+                                </span>
+                                <h3 class="counter-text-font">START-UPS</h3>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <h1 class="counter-text-font">SYSTEMS INSTALLED</h1>
-                                <h1 class="counterTitle numscroller OpenBold white counter-number-font" data-min='0000' data-max='10000'
-                                    data-delay='1' data-increment='70'>10000
-                                </h1>
+                                <span class="counterTitle numscroller OpenBold white counter-number-font" data-min='0' data-max='10000'
+                                    data-delay='3' data-increment='25'>10000
+                                </span><span class="counterTitle OpenBold white counter-number-font"> +</span>
+                                <h3 class="counter-text-font">SYSTEMS INSTALLED</h3>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <h1 class="counter-text-font">CORPORATE</h1>
-                                <h1 class="counterTitle numscroller OpenBold white counter-number-font" data-min='0000' data-max='25'
-                                    data-delay='1' data-increment='30'>25
-                                </h1>
+                                <span class="counterTitle numscroller OpenBold white counter-number-font" data-min='0' data-max='25'
+                                    data-delay='3' data-increment='1'>25
+                                </span>
+                                <h3 class="counter-text-font">CORPORATE</h3>
                             </div>
                         </div>
                     </div>
@@ -268,7 +198,7 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
                     <div class="row">
-                        <div class="col-md-12 col-xs-12 col-sm-12 sectionHeader text-center ata-aos="fade-right" data-aos-duration="1000">
+                        <div class="col-md-12 col-xs-12 col-sm-12 pb-3 sectionHeader text-center ata-aos="fade-right" data-aos-duration="1000">
                             <h1 class="SectionTitle RobotoMedium">Featured Products</h1>
                             <div class="underTitleLine gradientbg"></div>
                             <p class="sectionDescription LightColor RobotoLight">
@@ -276,37 +206,105 @@
                                 From Xeon-based rack mount servers to Laserjet Printers – You name it. We have it.
                             </p>
                         </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 pb-5">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12 col-sm-12" data-aos="fade-right" data-aos-duration="1000">
+                                    <h3 class="text-center RobotoMedium">Top Brands Available</h3>
+                                    <div class="owl-carousel BrandsCarousel owl-theme">
+                                        <div class="item pl-7">
+                                            <img class="img-responsive width-70-percent" src="assets/images/brand/1.png" alt="Brand 1" />
+                                        </div>
+                                        <div class="item pl-7">
+                                            <img class="img-responsive width-70-percent" src="assets/images/brand/2.png" alt="Brand 2" />
+                                        </div>
+                                        <div class="item pl-7">
+                                            <img class="img-responsive width-70-percent" src="assets/images/brand/3.png" alt="Brand 3" />
+                                        </div>
+                                        <div class="item pl-7">
+                                            <img class="img-responsive width-70-percent" src="assets/images/brand/4.png" alt="Brand 4" />
+                                        </div>
+                                        <div class="item pl-7">
+                                            <img class="img-responsive width-70-percent" src="assets/images/brand/5.png" alt="Brand 5" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-12 col-xs-12 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="popularBox">
-                                        <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/1.png')"></div>
-                                        <div class="col-md-12 popularPadding text-center">
-                                            <h3 class="OpensanssemBold">Desktop</h3>
+                                    <div class="popularBox info-card">
+                                        <div class="front">
+                                            <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/1.png')"></div>
+                                            <div class="col-md-12 popularPadding text-center">
+                                                <h3 class="OpensanssemBold">Desktop</h3>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <h2>Lorem ipsum</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sem eget metus congue ultricies. 
+                                                Integer eleifend fringilla risus vitae tincidunt. Pellentesque risus augue, molestie in elementum quis, placerat ut ex. 
+                                                Integer blandit fringilla dolor sed tristique. Nunc eu nisl sodales, luctus mauris sit amet, vestibulum felis.
+                                                Donec facilisis bibendum justo, ut dapibus turpis hendrerit eget. Donec sollicitudin eleifend dolor, sed facilisis elit ornare nec. Sed aliquam commodo dolor.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="popularBox">
-                                        <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/2.png')"></div>
-                                        <div class="col-md-12 popularPadding text-center">
-                                            <h3 class="OpensanssemBold">Laptops</h3>
+                                    <div class="popularBox info-card">
+                                        <div class="front">
+                                            <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/2.png')"></div>
+                                            <div class="col-md-12 popularPadding text-center">
+                                                <h3 class="OpensanssemBold">Laptops</h3>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <h2>Lorem ipsum</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sem eget metus congue ultricies. 
+                                                Integer eleifend fringilla risus vitae tincidunt. Pellentesque risus augue, molestie in elementum quis, placerat ut ex. 
+                                                Integer blandit fringilla dolor sed tristique. Nunc eu nisl sodales, luctus mauris sit amet, vestibulum felis.
+                                                Donec facilisis bibendum justo, ut dapibus turpis hendrerit eget. Donec sollicitudin eleifend dolor, sed facilisis elit ornare nec. Sed aliquam commodo dolor.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="popularBox">
-                                        <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/3.png')"></div>
-                                        <div class="col-md-12 popularPadding text-center">
-                                            <h3 class="OpensanssemBold">Apple Products</h3>
+                                    <div class="popularBox info-card">
+                                        <div class="front">
+                                            <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/3.png')"></div>
+                                            <div class="col-md-12 popularPadding text-center">
+                                                <h3 class="OpensanssemBold">Apple Products</h3>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <h2>Lorem ipsum</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sem eget metus congue ultricies. 
+                                                Integer eleifend fringilla risus vitae tincidunt. Pellentesque risus augue, molestie in elementum quis, placerat ut ex. 
+                                                Integer blandit fringilla dolor sed tristique. Nunc eu nisl sodales, luctus mauris sit amet, vestibulum felis.
+                                                Donec facilisis bibendum justo, ut dapibus turpis hendrerit eget. Donec sollicitudin eleifend dolor, sed facilisis elit ornare nec. Sed aliquam commodo dolor.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="popularBox">
-                                        <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/4.png')"></div>
-                                        <div class="col-md-12 popularPadding text-center">
-                                            <h3 class="OpensanssemBold">Tablets</h3>
+                                    <div class="popularBox info-card">
+                                        <div class="front">
+                                            <div class="col-md-12 ImageContainer" style="background: url('assets/images/products/4.png')"></div>
+                                            <div class="col-md-12 popularPadding text-center">
+                                                <h3 class="OpensanssemBold">Tablets</h3>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <h2>Lorem ipsum</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sem eget metus congue ultricies. 
+                                                Integer eleifend fringilla risus vitae tincidunt. Pellentesque risus augue, molestie in elementum quis, placerat ut ex. 
+                                                Integer blandit fringilla dolor sed tristique. Nunc eu nisl sodales, luctus mauris sit amet, vestibulum felis.
+                                                Donec facilisis bibendum justo, ut dapibus turpis hendrerit eget. Donec sollicitudin eleifend dolor, sed facilisis elit ornare nec. Sed aliquam commodo dolor.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -364,7 +362,7 @@
                                         </div>
                                         <div class="col-md-12 mt-4">
                                             <span>
-                                                <a class="btn btn-custom-secondary">Read More</a>
+                                                <span data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="btn btn-custom-secondary">Read More</span>
                                             </span>
                                         </div>
                                     </div>
@@ -386,7 +384,7 @@
                                         </div>
                                         <div class="col-md-12 mt-4">
                                             <span>
-                                                <a class="btn btn-custom-secondary">Read More</a>
+                                                <span data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="btn btn-custom-secondary">Read More</span>
                                             </span>
                                         </div>
                                     </div>
@@ -408,7 +406,7 @@
                                         </div>
                                         <div class="col-md-12 mt-4">
                                             <span>
-                                                <a class="btn btn-custom-secondary">Read More</a>
+                                                <span data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="btn btn-custom-secondary">Read More</span>
                                             </span>
                                         </div>
                                     </div>
@@ -431,7 +429,7 @@
                                         </div>
                                         <div class="col-md-12 mt-4">
                                             <span>
-                                                <a class="btn btn-custom-secondary">Read More</a>
+                                                <span data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="btn btn-custom-secondary">Read More</span>
                                             </span>
                                         </div>
                                     </div>
@@ -453,7 +451,7 @@
                                         </div>
                                         <div class="col-md-12 mt-4">
                                             <span>
-                                                <a class="btn btn-custom-secondary">Read More</a>
+                                                <span data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="btn btn-custom-secondary">Read More</span>
                                             </span>
                                         </div>
                                     </div>
@@ -475,7 +473,7 @@
                                         </div>
                                         <div class="col-md-12 mt-4">
                                             <span>
-                                                <a class="btn btn-custom-secondary">Read More</a>
+                                                <span data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="btn btn-custom-secondary">Read More</span>
                                             </span>
                                         </div>
                                     </div>
@@ -538,7 +536,7 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
                     <div class="row">
-                        <div class="col-md-12 col-xs-12 col-sm-12 sectionHeader text-center" data-aos="fade-up"
+                        <div class="col-md-12 col-xs-12 col-sm-12 pb-3 sectionHeader text-center" data-aos="fade-up"
                             data-aos-duration="1000">
                             <h1 class="SectionTitle RobotoMedium text-center">TESTIMONIALS</h1>
                             <div class="underTitleLine gradientbg"></div>
@@ -547,130 +545,170 @@
                                 Clients
                             </p>
                         </div>
-                        <div class="col-md-12 col-xs-12 col-sm-12">
-                            
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="popularBox BoxLayout">
-                                        <div class="col-md-8 pl-0">
-                                            <p>CEO</p>
-                                            <h4>Stefan Eiel</h4>
-                                            <p class="serviceDetail">
-                                                A senior US diplomat has testified
-                                            </p>
-                                            <ul class="list-inline SocialIcons pt-3 pl-4">
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-facebook fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-twitter fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-instagram fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-youtube fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-linkedin fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 pl-0 pr-0">
-                                            <img src="./assets/images/team/1.png" class="img-responsive" alt="Service" />
-                                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12">                            
+                            <div class="row owl-carousel teamCarousel owl-theme">
+                                <div class="popularBox BoxLayout m-3 bg-white item">
+                                    <div class="col-md-7 pl-0 pr-0">
+                                        <p>CEO</p>
+                                        <h4>Stefan Eiel</h4>
+                                        <p class="serviceDetail">
+                                            He told a Congressional committee that two
+                                            state department officials said Mr Trump
+                                            would not "sign a check" for nearly $400m
+                                        </p>
+                                        <ul class="list-inline SocialIcons pt-3 pl-4">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-facebook fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-twitter fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-instagram fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-youtube fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-linkedin fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5 pl-0 pr-0">
+                                        <img src="./assets/images/team/1.png" class="img-responsive img-team" alt="Service" />
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="popularBox BoxLayout">
-                                        <div class="col-md-8 pl-0">
-                                            <p>Co-Founder</p>
-                                            <h4>Leon Weissmuller</h4>
-                                            <p class="serviceDetail">
-                                                Mr Taylor testified in closed
-                                            </p>
-                                            <ul class="list-inline SocialIcons pt-3 pl-4">
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-facebook fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-twitter fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-instagram fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-youtube fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-linkedin fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 pl-0 pr-0">
-                                            <img src="./assets/images/team/2.png" class="img-responsive" alt="Service" />
-                                        </div>
+                                <div class="popularBox BoxLayout m-3 bg-white item">
+                                    <div class="col-md-7 pl-0 pr-0">
+                                        <p>Co-Founder</p>
+                                        <h4>Leon Weissmuller</h4>
+                                        <p class="serviceDetail">
+                                            He told a Congressional committee that two
+                                            state department officials said Mr Trump
+                                            would not "sign a check" for nearly $400m
+                                        </p>
+                                        <ul class="list-inline SocialIcons pt-3 pl-4">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-facebook fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-twitter fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-instagram fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-youtube fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-linkedin fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5 pl-0 pr-0">
+                                        <img src="./assets/images/team/2.png" class="img-responsive img-team" alt="Service" />
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="popularBox BoxLayout">
-                                        <div class="col-md-8 pl-0">
-                                            <p>Lead</p>
-                                            <h4>Swen Kastner</h4>
-                                            <p class="serviceDetail">
-                                                He told a Congressional committee
-                                            </p>
-                                            <ul class="list-inline SocialIcons pt-3 pl-4">
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-facebook fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-twitter fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-instagram fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-youtube fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        <i class="fa fa-linkedin fa-lg text-black"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 pl-0 pr-0">
-                                            <img src="./assets/images/team/3.png" class="img-responsive" alt="Service" />
-                                        </div>
+                                <div class="popularBox BoxLayout m-3 bg-white item">
+                                    <div class="col-md-7 pl-0 pr-0">
+                                        <p>Lead</p>
+                                        <h4>Swen Kastner</h4>
+                                        <p class="serviceDetail">
+                                            He told a Congressional committee that two
+                                            state department officials said Mr Trump
+                                            would not "sign a check" for nearly $400m
+                                        </p>
+                                        <ul class="list-inline SocialIcons pt-3 pl-4">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-facebook fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-twitter fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-instagram fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-youtube fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-linkedin fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5 pl-0 pr-0">
+                                        <img src="./assets/images/team/3.png" class="img-responsive img-team" alt="Service" />
+                                    </div>
+                                </div>
+                                <div class="popularBox BoxLayout m-3 bg-white item">
+                                    <div class="col-md-7 pl-0 pr-0">
+                                        <p>Co-Founder</p>
+                                        <h4>Leon Weissmuller</h4>
+                                        <p class="serviceDetail">
+                                            He told a Congressional committee that two
+                                            state department officials said Mr Trump
+                                            would not "sign a check" for nearly $400m
+                                        </p>
+                                        <ul class="list-inline SocialIcons pt-3 pl-4">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-facebook fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-twitter fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-instagram fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-youtube fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-linkedin fa-lg text-black"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5 pl-0 pr-0">
+                                        <img src="./assets/images/team/4.png" class="img-responsive img-team" alt="Service" />
                                     </div>
                                 </div>
                             </div>
@@ -687,7 +725,7 @@
 
     <!--GALLERY START HERE-->
     
-    <section id="ourpresence">
+    <section id="gallery">
         <div class="container sectionPadding">
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
@@ -699,12 +737,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 co-xs-12 text-center">
-                            <a class="text-orange" href=""><b>All Pictures</b></a>
+                            <a class="text-orange" href="javascript:;" id="galleryPictures"><b>All Pictures</b></a>
                             
-                            <a class="pl-4 text-gray" href=""><b>Videos</b></a>
+                            <a class="pl-4 text-gray" href="javascript:;" id="galleryVideos"><b>Videos</b></a>
                         </div>
                     </div>
-                    <div class="row pt-5">
+                    <div class="row pt-5" id="galleryPicturesDiv">
                         <div class="col-md-3 col-sm-3 co-xs-4 pb-5">
                             <div>
                                 <img class="width-100-percent" src="assets/images/gallery/8.png">
@@ -744,6 +782,48 @@
                             <div>
                                 <img class="width-100-percent" src="assets/images/gallery/6.png">
                             </div>
+                        </div>
+                    </div>
+                    <div class="row pt-5 display-none" id="galleryVideosDiv">
+                        <div class="col-md-3 col-sm-3 co-xs-4 pb-5 itemsContainer">
+                            <a href="javascript:;" data-toggle="modal" data-target="#playVideo">
+                                <div>
+                                    <img class="width-100-percent" src="./assets/images/gallery/ASUS-Scar-3-headline.jpg">
+                                </div>
+                                <div class="play pt-4">
+                                    <img src="./assets/images/icons/youtube-play.png" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 co-xs-4 pb-5 itemsContainer">
+                            <a href="javascript:;" data-toggle="modal" data-target="#playVideo2">
+                                <div>
+                                    <img class="width-100-percent" src="./assets/images/gallery/lenovo.jfif">
+                                </div>
+                                <div class="play pt-4">
+                                    <img src="./assets/images/icons/youtube-play.png" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 co-xs-4 pb-5 itemsContainer">
+                            <a href="javascript:;" data-toggle="modal" data-target="#playVideo">
+                                <div>
+                                    <img class="width-100-percent" src="./assets/images/gallery/ASUS-Scar-3-headline.jpg">
+                                </div>
+                                <div class="play pt-4">
+                                    <img src="./assets/images/icons/youtube-play.png" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 co-xs-4 pb-5 itemsContainer">
+                            <a href="javascript:;" data-toggle="modal" data-target="#playVideo">
+                                <div>
+                                    <img class="width-100-percent" src="./assets/images/gallery/ASUS-Scar-3-headline.jpg">
+                                </div>
+                                <div class="play pt-4">
+                                    <img src="./assets/images/icons/youtube-play.png" />
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -853,33 +933,38 @@
         <div class="modal-dialog postModal">
             <button type="button" class="close myCloseBtn" data-dismiss="modal">×</button>
             <div class="modal-content">
-                <div class="blogModalImage">
-                    <img src="assets/images/blog/3.png" alt="Blog Post" class="img-responsive" />
-                </div>
-                <div class="blogPostContent">
-                    <p class="popularDesc dates">By: <span>Sarah Taylor </span>/ <span>June 24, 2019 </span></p>
-                    <p class="popularDesc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sem eget metus congue
-                        ultricies. Integer eleifend fringilla risus vitae tincidunt. Pellentesque risus augue, molestie
-                        in elementum quis, placerat ut ex. Integer blandit fringilla dolor sed tristique. Nunc eu nisl
-                        sodales, luctus mauris sit amet, vestibulum felis. Donec facilisis bibendum justo, ut dapibus
-                        turpis hendrerit eget. Donec sollicitudin eleifend dolor, sed facilisis elit ornare nec. Sed
-                        aliquam commodo dolor. Donec vel cursus lacus. Pellentesque egestas consequat orci eget
-                        molestie. Phasellus et lorem egestas, consequat massa eu, aliquam risus. Vestibulum nisi mauris,
-                        consequat vel nulla eget, aliquam volutpat odio. Vestibulum ante ipsum primis in faucibus orci
-                        luctus et ultrices posuere cubilia Curae; Sed mattis lacus ut erat placerat iaculis. Integer ac
-                        eros sed arcu tempor suscipit.
-                    </p>
-                    <p class="popularDesc">
-                        Sed facilisis nisi sed pretium mollis. Praesent fringilla luctus lorem tincidunt semper. Morbi
-                        erat mauris, ultrices et purus ac, bibendum sodales mi. Duis in suscipit arcu, ut maximus
-                        mauris. Sed dapibus, dui sit amet feugiat commodo, augue erat congue tortor, pellentesque
-                        tristique metus turpis vitae ipsum. Nullam in rutrum velit. Nam eu lacinia quam. Praesent sed
-                        orci ac neque viverra vestibulum vitae ut tortor. Pellentesque luctus, nibh sit amet ultrices
-                        consectetur, erat nisl auctor purus, et condimentum diam mi sit amet erat. Aliquam erat lorem,
-                        tincidunt id quam vel, tempor pellentesque sapien. Vivamus non bibendum tortor. Donec fringilla
-                        ultricies venenatis.
-                    </p>
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        <div class="blogModalImage">
+                            <img src="assets/images/blog/01.jpg" alt="Blog Post" class="img-responsive" />
+                        </div>                        
+                    
+                        <div class="blogPostContent">
+                            <p class="popularDesc dates">By: <span>Sarah Taylor </span>/ <span>June 24, 2019 </span></p>
+                            <p class="popularDesc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sem eget metus congue
+                                ultricies. Integer eleifend fringilla risus vitae tincidunt. Pellentesque risus augue, molestie
+                                in elementum quis, placerat ut ex. Integer blandit fringilla dolor sed tristique. Nunc eu nisl
+                                sodales, luctus mauris sit amet, vestibulum felis. Donec facilisis bibendum justo, ut dapibus
+                                turpis hendrerit eget. Donec sollicitudin eleifend dolor, sed facilisis elit ornare nec. Sed
+                                aliquam commodo dolor. Donec vel cursus lacus. Pellentesque egestas consequat orci eget
+                                molestie. Phasellus et lorem egestas, consequat massa eu, aliquam risus. Vestibulum nisi mauris,
+                                consequat vel nulla eget, aliquam volutpat odio. Vestibulum ante ipsum primis in faucibus orci
+                                luctus et ultrices posuere cubilia Curae; Sed mattis lacus ut erat placerat iaculis. Integer ac
+                                eros sed arcu tempor suscipit.
+                            </p>
+                            <p class="popularDesc">
+                                Sed facilisis nisi sed pretium mollis. Praesent fringilla luctus lorem tincidunt semper. Morbi
+                                erat mauris, ultrices et purus ac, bibendum sodales mi. Duis in suscipit arcu, ut maximus
+                                mauris. Sed dapibus, dui sit amet feugiat commodo, augue erat congue tortor, pellentesque
+                                tristique metus turpis vitae ipsum. Nullam in rutrum velit. Nam eu lacinia quam. Praesent sed
+                                orci ac neque viverra vestibulum vitae ut tortor. Pellentesque luctus, nibh sit amet ultrices
+                                consectetur, erat nisl auctor purus, et condimentum diam mi sit amet erat. Aliquam erat lorem,
+                                tincidunt id quam vel, tempor pellentesque sapien. Vivamus non bibendum tortor. Donec fringilla
+                                ultricies venenatis.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -890,6 +975,115 @@
     <!--- BLOG SECTION END HERE-->
 
 
+    <!--CONTACT US SECTION START HERE -->
+    
+    <section id="contactUs">
+        <div class="sectionPadding">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-offset-2 col-xs-12 col-sm-8">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 col-sm-12 sectionHeader text-center" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <h1 class="SectionTitle RobotoMedium">Get In Touch</h1>
+                            <div class="underTitleLine gradientbg"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12 col-sm-12 pl-0">
+                            <h4>Head Office</h4>
+                            <p>
+                                Rent A PC 118, First Floor, Best Sky Tower, Netaji Subhash Place, Pitampura, New Delhi - 110034, India
+                            </p>
+                            
+                            <h4 class="pt-4">Other Office</h4>
+                            <p>
+                                S-78 Okhla Phase 2 New Delhi - 110020, India    
+                            </p>
+                            <ul class="list-inline SocialIcons pt-3">
+                                <li>
+                                    <a target="_blank" href=" https://www.facebook.com/rentapc.in">
+                                        <i class="fa fa-facebook fa-lg pr-3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://twitter.com/RENTaPC2">
+                                        <i class="fa fa-twitter fa-lg pr-3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/_rentapc/">
+                                        <i class="fa fa-instagram fa-lg pr-3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCjiZkKbs8u2JhHFesxtM8xw">
+                                        <i class="fa fa-youtube fa-lg pr-3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/rentapc/">
+                                        <i class="fa fa-linkedin fa-lg"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-xs-12 col-sm-12 pr-0">
+                            <form action="#" id="contact-form" method="POST">
+                                <div class="col-md-6 inputContainer col-xs-12 col-sm-6" data-aos="fade-right"
+                                    data-aos-duration="1000">
+                                    <label for="name">Enter Name*</label>
+                                    <input type="text" class="form-control themeInputs" placeholder="Name" id="name" />
+                                    <p class="error">&nbsp;</p>
+                                </div>
+                                <div class="col-md-6 inputContainer col-xs-12 col-sm-6" data-aos="fade-left"
+                                    data-aos-duration="1000">
+                                    <label for="email">Enter Email*</label>
+                                    <input type="email" class="form-control themeInputs" placeholder="Email"
+                                        id="email" />
+                                    <p class="error">&nbsp;</p>
+                                </div>
+                                <div class="col-md-6 inputContainer col-xs-12 col-sm-6" data-aos="fade-right"
+                                    data-aos-duration="1000">
+                                    <label for="mobile">Enter Mobile*</label>
+                                    <input type="text" class="form-control themeInputs" placeholder="Mobile No."
+                                        id="mobile" />
+                                    <p class="error">&nbsp;</p>
+                                </div>
+                                <div class="col-md-6 inputContainer col-xs-12 col-sm-6" data-aos="fade-left"
+                                    data-aos-duration="1000">
+                                    <label for="subject">Nature of query*</label>
+                                    <select class="form-control themeInputs" placeholder="Your Query" id="query">
+                                        <option value="" selected>Nature of query</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="Support">Support</option>
+                                        <option value="Franchise">Franchise</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                    <p class="error">&nbsp;</p>
+                                </div>
+                                <div class="col-md-12 inputContainer" data-aos="fade-up" data-aos-duration="1000">
+                                    <label for="message">What you want to known*</label>
+                                    <textarea class="form-control themeInputs" placeholder="Your Message Here"
+                                        id="message"></textarea>
+                                    <p class="error">&nbsp;</p>
+                                </div>
+                                <div class="g-reCAPTCHA" data-sitekey="your_site_key"></div>
+                                <div class="col-md-12 inputContainer" data-aos="zoom-in" data-aos-duration="1000"
+                                    style="padding: 20px 0px">
+                                    <button type="submit" class="btn gradientBtn" style="margin: 0 auto; display: block; "
+                                        data-toggle="modal" data-target="#pop-register">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--CONTACT US SECTION END HERE -->
 
 
     <!--PARTNERS SECTION START HERE-->
@@ -949,29 +1143,29 @@
                                     <img class="img-responsive" src="assets/images/logo-white.png" alt="Logo" />
                                 </h3>
                                 <h2>Stay in touch</h2>
-                                <ul class="list-inline SocialIcons pt-3 pl-4">
+                                <ul class="list-inline SocialIcons pt-3 pl-1">
                                     <li>
-                                        <a href="javascript:;">
-                                            <i class="fa fa-facebook fa-lg"></i>
+                                        <a target="_blank" href=" https://www.facebook.com/rentapc.in">
+                                            <i class="fa fa-facebook fa-lg pr-3"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;">
-                                            <i class="fa fa-twitter fa-lg"></i>
+                                        <a target="_blank" href="https://twitter.com/RENTaPC2">
+                                            <i class="fa fa-twitter fa-lg pr-3"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;">
-                                            <i class="fa fa-instagram fa-lg"></i>
+                                        <a target="_blank" href="https://www.instagram.com/_rentapc/">
+                                            <i class="fa fa-instagram fa-lg pr-3"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;">
-                                            <i class="fa fa-youtube fa-lg"></i>
+                                        <a target="_blank" href="https://www.youtube.com/channel/UCjiZkKbs8u2JhHFesxtM8xw">
+                                            <i class="fa fa-youtube fa-lg pr-3"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;">
+                                        <a target="_blank" href="https://www.linkedin.com/company/rentapc/">
                                             <i class="fa fa-linkedin fa-lg"></i>
                                         </a>
                                     </li>
@@ -1003,6 +1197,7 @@
                                     <p class="pt-5">
                                         118, First Floor, Best Sky Tower, Netaji
                                         Subhash Place, Pitampura, Delhi 110034
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1060,8 +1255,6 @@
 
     <!-- gradient variation home js file -->
     <script type="text/javascript" src="assets/js/gradient.js"></script>
-
-
 </body>
 
 </html>

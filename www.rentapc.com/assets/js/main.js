@@ -59,8 +59,10 @@ function goTopFunction() {
  ======================================*/
 $(document).ready(function() {
     'use strict';
+    $('[data-toggle="tooltip"]').tooltip();
+    $("#galleryVideosDiv").hide();
 
-  
+
 	/* ==============================================
 	 Calling Scroll Animations
 	 =============================================== */
@@ -142,6 +144,26 @@ $(document).ready(function() {
         autoplayTimeout:3000,
         autoplaySpeed: 2000,
         autoplayHoverPause:false
+    });
+
+    $(".BrandsCarousel").owlCarousel({
+        items: 4,
+        dots: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplaySpeed: 2000,
+        autoplayHoverPause: false
+    });
+
+    $(".teamCarousel").owlCarousel({
+        items: 3,
+        dots: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplaySpeed: 2000,
+        autoplayHoverPause: false
     });
 
 
@@ -299,7 +321,7 @@ $(document).ready(function() {
         var name = $("#name");
         var email = $("#email");
         var mobile = $("#mobile");
-        var subject = $("#subject");
+        var query = $("#query");
         var message = $("#message");
 
         var error = 0;//means no error
@@ -315,9 +337,6 @@ $(document).ready(function() {
         if(email.val()=='')
         {
             email.parent().find(".error").html('Please enter your email');
-            error = 1;
-        }else if(!validateEmail(email)){
-            email.parent().find(".error").html('Please enter valid email');
             error = 1;
         }else{
             email.parent().find(".error").html('&nbsp;');
@@ -340,12 +359,12 @@ $(document).ready(function() {
             }
         }
 
-        if(subject.val()=='')
+        if(query.val()=='')
         {
-            subject.parent().find(".error").html('Please enter your subject');
+            query.parent().find(".error").html('Please enter your query');
             error = 1;
         }else{
-            subject.parent().find(".error").html('&nbsp;');
+            query.parent().find(".error").html('&nbsp;');
         }
 
         if(message.val()=='')
@@ -364,7 +383,7 @@ $(document).ready(function() {
                     name:name.val(),
                     email:email.val(),
                     mobile:mobile.val(),
-                    subject:subject.val(),
+                    query:query.val(),
                     message:message.val()
                 },function(r){
                    if(r=="success")
@@ -377,7 +396,47 @@ $(document).ready(function() {
         }
 
     });
+    var count = 2;
+    setInterval(function () { 
+        if (count == 1) {
+            $("#btnLandingLink").html('View More');
+            $("#btnLandingLink").attr("href", "#gallery");
+        } else if (count == 2) {
+            $("#btnLandingLink").html('Why Us');
+            $("#btnLandingLink").attr("href", "#whyUs");
+        } else if (count == 3) {
+            $("#btnLandingLink").html('Know More');
+            $("#btnLandingLink").attr("href", "#Counter");
+        }        
+        let imageUrl = "https://deekshithdike.github.io/www.rentapc.com/assets/images/bg-0" + count + ".jpg";
+        // let imageUrl = "http://127.0.0.1:5501/assets/images/bg-0" + count + ".jpg";
+        $("#header").css("background-image", "url(" + imageUrl + ")"); 
+        count ++
 
+        if (count > 3) {
+            count = 1;
+        }
+    }, 3000);
 
+    $("#galleryPictures").on('click', function (e) {
+        e.preventDefault();
+        $("#galleryVideosDiv").hide();
+        $("#galleryPicturesDiv").show();
+        $("#galleryVideos").removeClass('text-orange');
+        $("#galleryVideos").addClass('text-gray');
 
+        $("#galleryPictures").removeClass('text-gray');
+        $("#galleryPictures").addClass('text-orange');
+    });
+
+    $("#galleryVideos").on('click', function (e) {
+        e.preventDefault();
+        $("#galleryPicturesDiv").hide();
+        $("#galleryVideosDiv").show();
+        $("#galleryPictures").removeClass('text-orange');
+        $("#galleryPictures").addClass('text-gray');
+
+        $("#galleryVideos").removeClass('text-gray');
+        $("#galleryVideos").addClass('text-orange');
+    });
 });
